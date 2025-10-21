@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="main.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Music Player</title>
+</head>
+<body class="bg-[#212121]">
+    <div class="container w-[400px] h-[500px] mt-[10%] m-auto bg-[#FFE1E2]">
+        <div class="arrowscontainer flex justify-between p-10">
+            <div class="leftarrow rounded-full bg-white w-[30px] h-[30px] text-center pt-[2px]">
+                 <button><i class="fa-solid fa-angle-left"  style="color: #F1C2D4";></i></button>
+            </div>
+           <div class="bars rounded-full bg-white w-[30px] h-[30px] text-center pt-[2px]">
+            <button><i class="fa-solid fa-bars" style="color: #F1C2D4";></i></button>
+           </div>
+        </div>
+        <div class="photocontainer w-[210px] h-[210px] bg-white flex items-center rounded-full justify-center m-auto">
+            <img src="Images/Photo.png" alt="Photo" class="w-[190px] h-[190px] rounded-full">
+        </div>
+        <div class="linescontainer w-max m-auto text-center mt-3 text-gray-700">
+            <h1 class="font-semibold">Despacito</h1>
+            <p class="text-sm">Luis Fonsi Ft. Puerto Rican</p>
+        </div>
+        <div class="slider-container w-[87%] m-auto mt-5 ">
+            <input type="range" class="slider" >
+        </div>
+        <div class="downarrowcontainer">
+            
+        </div>
+    </div>
+</body>
+</html>

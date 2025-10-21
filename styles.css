@@ -1,0 +1,103 @@
+@import "tailwindcss";
+.slider-container {
+  width: 300px;
+  margin: 50px auto;
+}
+.slider-container {
+  width: 100%;
+  margin: 50px auto;
+}
+
+/* Base slider */
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  background: #fcd9e2; /* light pink for remaining track */
+  border-radius: 9999px;
+  outline: none;
+  position: relative;
+}
+
+/* Webkit Track (we'll hide it to use background fill via gradient) */
+.slider::-webkit-slider-runnable-track {
+  height: 10px;
+  background: transparent;
+  border-radius: 9999px;
+}
+
+/* Thumb */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  background: #fff; /* outer white circle */
+  border: 2px solid #FD4991;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+/* Inner pink circle on thumb */
+.slider::-webkit-slider-thumb::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: #FD4991;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Firefox track & thumb */
+.slider::-moz-range-track {
+  height: 10px;
+  background: #fcd9e2;
+  border-radius: 9999px;
+}
+.slider::-moz-range-progress {
+  background: #FD4991; /* filled part */
+  height: 10px;
+  border-radius: 9999px;
+}
+.slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border-radius: 50%;
+  border: 2px solid #FD4991;
+  cursor: pointer;
+}
+
+/* IE / Edge track & thumb */
+.slider::-ms-track {
+  height: 10px;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.slider::-ms-fill-lower {
+  background: #FD4991;
+  border-radius: 9999px;
+}
+.slider::-ms-fill-upper {
+  background: #fcd9e2;
+  border-radius: 9999px;
+}
+.slider::-ms-thumb {
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border-radius: 50%;
+  border: 2px solid #FD4991;
+  cursor: pointer;
+}
+
+/* Dynamic fill for Chrome/Edge Webkit */
+.slider::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #FD4991 0%, #FD4991 50%, #fcd9e2 50%, #fcd9e2 100%);
+  border-radius: 9999px;
+}

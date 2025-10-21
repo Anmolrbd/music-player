@@ -10,7 +10,7 @@
     <title>Music Player</title>
 </head>
 <body class="bg-[#212121]">
-    <div class="container w-[400px] h-[500px] mt-[10%] m-auto bg-[#FFE1E2]">
+    <div class="container w-[400px] h-max mt-[10%] m-auto bg-[#FFE1E2] p-6 rounded-lg">
         <div class="arrowscontainer flex justify-between p-10">
             <div class="leftarrow rounded-full bg-white w-[30px] h-[30px] text-center pt-[2px]">
                  <button><i class="fa-solid fa-angle-left"  style="color: #F1C2D4";></i></button>
@@ -27,10 +27,21 @@
             <p class="text-sm">Luis Fonsi Ft. Puerto Rican</p>
         </div>
         <div class="slider-container w-[87%] m-auto mt-5 ">
-            <input type="range" class="slider" >
+            <input type="range" class="slider" id="slider" min="0" max="230">
+            <audio src="Despacito.mp3" controls class="hidden" id="audiotrack"></audio>
         </div>
-        <div class="downarrowcontainer">
-            
+
+        <div class="downarrowscontainer flex justify-evenly items-center mt-5">
+            <div class="backwardcontainer bg-white w-[40px] h-[40px] rounded-full flex items-center justify-center">
+               <button><i class="fa-solid fa-backward text-[12px]" style="color:#FF4996;"></i></button> 
+            </div>
+            <div class="playbuttoncontainer bg-[#FF4996] w-[60px] h-[60px] flex items-center justify-center rounded-full">
+                <button id="playbtn"><i class="playbtn fa-solid fa-play " style="color: white;" id="innerplay"></i></button>
+                <button id="pausebtn"><i class="pausebtn fa-solid fa-pause hidden" style="color: white;" id="innerpause"></i></button>
+            </div>
+            <div class="forwardcontianer  bg-white w-[40px] h-[40px] rounded-full flex items-center justify-center">
+                    <button><i class="fa-solid fa-forward text-[12px]" style="color:#FF4996;"></i></button>
+                </div>
         </div>
     </div>
 </body>
